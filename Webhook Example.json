@@ -1,0 +1,69 @@
+{
+  "name": "Webhook Example",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "92347575-8a31-42b4-bdc6-ae79c5b62038",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "06cd8a5d-125d-4bac-8da4-2238424258c9",
+      "name": "Webhook",
+      "webhookId": "92347575-8a31-42b4-bdc6-ae79c5b62038"
+    },
+    {
+      "parameters": {
+        "chatId": "6634340689",
+        "text": "A web hook was just called from the demo app.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "58560397-bf73-412a-938d-bb9af98bb374",
+      "name": "Send a text message",
+      "webhookId": "63edd68d-9a6c-4d09-8424-fd291cbea78c",
+      "credentials": {
+        "telegramApi": {
+          "id": "5AWB8LzaH8rlotoD",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ddc7e9e4-b1c0-4735-a368-b652b19ef4db",
+  "meta": {
+    "instanceId": "be132a985ad74df5bfc26004547a7d18affb10610505d85f24bf9c3efaa18fb3"
+  },
+  "nodeGroups": [],
+  "id": "WEDSMApupPoGHqhj",
+  "tags": []
+}
